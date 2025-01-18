@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>STUDER-M12086</title>
     <style>
         body {
             margin: 0;
@@ -19,10 +19,11 @@
             padding: 10px 20px;
             background-color: #fff;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
         }
 
         .logo {
-            height: 100px;
+            height: 100px; 
         }
 
         .wed {
@@ -36,7 +37,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: calc(100vh - 70px);
+            height: calc(100vh - 70px); 
         }
 
         h1 {
@@ -44,145 +45,69 @@
             margin-bottom: 20px;
         }
 
-        .login-container {
-            width: 90%;
-            max-width: 400px;
-            padding: 30px;
-            background: linear-gradient(145deg, #fbfbfb, #e6e6e6);
-            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15), -2px -2px 8px rgba(255, 255, 255, 0.5); 
-            border-radius: 15px;
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .button {
+            width: 200px;
+            padding: 15px;
             text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .login-container:hover {
-            transform: translateY(-5px);
-            box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3), -5px -5px 20px rgba(255, 255, 255, 0.8);
-        }
-
-        .login-container h2 {
-            margin-bottom: 20px;
-            color: #194b1b;
-            font-size: 24px;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-        .login-container h1 {
-            margin-bottom: 10px; 
-            font-size: 24px;
-            font-weight: bold;
-            color: #236b25;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-            text-align: left;
-        }
-
-        .form-group label {
-            display: none; 
-        }
-
-        .form-group input {
-            width: calc(100% - 20px);
-            padding: 12px;
-            font-size: 16px;
-            border: 1px solid #ddd;
-            border-radius: 30px;
-            outline: none;
-            background-color: #f9f9f9;
-            transition: box-shadow 0.3s ease, border-color 0.3s ease;
-        }
-
-        .form-group input:focus {
-            border-color: #4CAF50;
-            box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
-            background-color: #fff;
-        }
-
-        .submit-button {
-            width: 100%;
-            padding: 12px;
-            background-color: #4CAF50;
+            background-color: rgb(24, 147, 11);
             color: white;
+            text-decoration: none;
             font-size: 18px;
             font-weight: bold;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
 
-        .submit-button:hover {
-            background-color: #45a049;
-            transform: translateY(-2px);
+        .button:hover {
+            background-color: rgb(6, 98, 59);
         }
 
-        .submit-button:active {
+        .button:active {
             background-color: #3e8e41;
-            transform: translateY(0);
         }
 
-        #errorMessage {
-            margin-top: 10px;
-            font-size: 14px;
+        h5 {
             color: red;
+            margin-top: 20px;
         }
 
         @media (orientation: landscape) {
             body {
-                background-color: #e8f5e9;
+                background-color: #efffea;
             }
         }
 
         @media (orientation: portrait) {
             body {
-                background-color: #e3f2fd;
+                background-color: #efffec;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="250423022416-DELPHI-TVS.png" alt="Logo" class="logo">
+  
+        <a href="index.html">
+            <img src="C:\Users\karth\Downloads\250423022416-DELPHI-TVS.png" alt="Logo" class="logo">
+        </a>
+
         <div class="wed">WED</div>
     </header>
-    <main>
-        <div class="login-container">
-            
-            <h1>WELCOME</h1>
-            <p></p>
-    
-            <form id="loginForm">
-                <div class="form-group">
-                    <input type="text" id="username" placeholder="Username" required>
-                </div>
-                <div class="form-group">
-                    <input type="password" id="password" placeholder="Password" required>
-                </div>
-                <button type="button" class="submit-button" onclick="authenticate()">Login</button>
-            </form>
-            <p id="errorMessage" style="display: none;">Invalid username or password. Please try again.</p>
-        </div>
-    </main>
-    <script>
-        
-        const validUsername = "admin";
-        const validPassword = "123";
-        function authenticate() {
-            const username = document.getElementById("username").value;
-            const password = document.getElementById("password").value;
-            const errorMessage = document.getElementById("errorMessage");
 
-            if (username === validUsername && password === validPassword) {
-                window.location.href = "wed.html"; 
-            } else {
-                errorMessage.style.display = "block";
-            }
-        }
-    </script>
+    <main>
+        <h1>STUDER-M12086</h1>
+        
+        <div class="button-container">
+            <a href="https://forms.gle/N4m1icRw59Atm3639" class="button">Report Breakdown</a>
+            <a href="login.html" class="button">Machine Details</a>
+        </div>
+        
+    </main>
 </body>
 </html>
